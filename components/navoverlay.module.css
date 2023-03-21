@@ -1,0 +1,9 @@
+.navoverlay{
+    background-color: limegreen;
+    width: 100vw;/*full width of viewport*/
+    height: 100vh; /*full height of viewport*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /*guaranteeing element goes on top of everything on website*/
+}
