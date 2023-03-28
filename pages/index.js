@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import Button from '../components/Button'; //everything about button component from some path in quotes
+import CarColorPicker from '../components/CarColorPicker';
 import Header from '../components/Header';
 import Image from 'next/image';
 import Layout from '../components/Layout';
@@ -24,18 +26,8 @@ export async function getStaticProps() {
 const Homepage = ({data, colors}) => { //components in react have caps, component = indepedent, reusable bit of code
   return <Layout> 
     <h1>Homepage</h1>
-    <h2>Color picker</h2>
-    <div>
-      Large image goes here.
-    </div>
-    <ul>
-      {colors.map((color) => {
-        return <Swatch color={color} />
-      })}
-    </ul>
-    <h3>Color name</h3>
-    
-    </Layout>
+    <CarColorPicker colors={colors} />
+  </Layout>
 } 
 export default Homepage //export=make available to be imported elsewhere in your doc; what's the deault function repsonsible for the display of this page?
 
