@@ -15,6 +15,7 @@
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -50, opacity: 0 }}
+            id="trimPicker"
         >
         <Image 
             src={trimLevels[activeIndex].images.large.sourceUrl}

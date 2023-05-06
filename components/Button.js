@@ -1,6 +1,6 @@
 //capital letter implies master component file
 import classnames from 'classnames/bind';
-import styles from './button.module.css';
+import styles from './button.module.scss';
 
 let cx= classnames.bind(styles);
 
