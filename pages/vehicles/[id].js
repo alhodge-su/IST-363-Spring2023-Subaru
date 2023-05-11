@@ -1,4 +1,5 @@
 import Container from '../../components/Container';
+import ColorPicker from '../../components/ColorPicker';
 import Image from 'next/image';
 import Layout from '../../components/Layout';
 import Showcase from '../../components/Showcase';
@@ -38,7 +39,7 @@ export async function getStaticPaths() {
   
   export default function SingleVehiclePage({ vehicleData }) {
     const {title, featuredImage, vehicleInformation} = vehicleData;
-    const { trimLevels, showcase } = vehicleInformation;
+    const { trimLevels, showcase, vehicleColors } = vehicleInformation;
     //console.log({trimLevels});
     return <Layout>
        <Showcase 
@@ -48,6 +49,7 @@ export async function getStaticPaths() {
        />
        <Container>       
          <TrimPicker trimLevels={trimLevels} />
+         <ColorPicker vehicleColors={vehicleColors}/>
         </Container>
     </Layout>
   }
