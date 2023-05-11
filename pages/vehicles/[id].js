@@ -1,3 +1,4 @@
+import Container from '../../components/Container';
 import Image from 'next/image';
 import Layout from '../../components/Layout';
 import Showcase from '../../components/Showcase';
@@ -45,6 +46,8 @@ export async function getStaticPaths() {
         headline={showcase.headline ? showcase.headline : null}
         backgroundImage={featuredImage ? featuredImage.node : null}
        />
-        <TrimPicker trimLevels={trimLevels} />
+       <Container>       
+         <TrimPicker trimLevels={trimLevels} />
+        </Container>
     </Layout>
   }
